@@ -8,7 +8,6 @@ var menuLinks = [
 
 //select and cache main element in variable called mainEl
 const mainEl = document.querySelector("main");
-// console.log('mainEl');
 
 //set bg color of mainEl to value stored in --main-bg css custom property/use var(--main-bg) function
 mainEl.style.backgroundColor = "var(--main-bg)";

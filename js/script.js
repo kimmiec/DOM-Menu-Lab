@@ -43,20 +43,34 @@ topMenuEl.setAttribute("class", "flex-around");
 
 //go back and copy data structure to the top!
 
-//iterate over the entire menuLinks array and for each "link" object: *create <a> element 
-const aTag = document.querySelector('a');
+//iterate over the entire menuLinks array and for each "link" object:
+for(let items of menuLinks) {
 
-//*add href attribute with value set to href property of the "link" object
+    // *create <a> element 
+    // const aTag = document.querySelector("a");
+let menus = document.createElement("a");
 
+    //*add href attribute with value set to href property of the "link" object
+    // document.querySelector("a").setAttribute();
+    // remember!! href is the name in the code!!
+    //calling something with dot notation - DONT NEED THE " "
+menus.setAttribute("href", items.href);
+    // console.log("menus");
+    //*set new elements content to the value of the text property of "link" object
+menus.innerHTML = items.text;
+//question: I originally had this written: menus.setAttribute("text", items.text); - did it not work because this overwrote the previous setAttribute? 
 
+    //append the new element to the topMenuEl element
+topMenuEl.appendChild(menus);
 
-//*set new elements content to the value of the text property of "link" object
-
-
-
-//append the new element to the topMenuEl element
-
-
-
+}
 //CHECK AND YOURE DONE
 
+
+
+// for(let items of menuLinks) {
+//     let menus = document.createElement("a");
+//     menus.setAttribute("href", "item.href");
+//     menus.setAttribute("text", "item.text");
+
+// }

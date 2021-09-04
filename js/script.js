@@ -54,10 +54,13 @@ let menus = document.createElement("a");
     // document.querySelector("a").setAttribute();
     // remember!! href is the name in the code!!
     //calling something with dot notation - DONT NEED THE " "
+    
 menus.setAttribute("href", items.href);
-    // console.log("menus");
+    
     //*set new elements content to the value of the text property of "link" object
+    
 menus.innerHTML = items.text;
+    
 //question: I originally had this written: menus.setAttribute("text", items.text); - did it not work because this overwrote the previous setAttribute? 
 
     //append the new element to the topMenuEl element
@@ -66,11 +69,3 @@ topMenuEl.appendChild(menus);
 }
 //CHECK AND YOURE DONE
 
-
-
-// for(let items of menuLinks) {
-//     let menus = document.createElement("a");
-//     menus.setAttribute("href", "item.href");
-//     menus.setAttribute("text", "item.text");
-
-// }
